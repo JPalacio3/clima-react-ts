@@ -9,7 +9,7 @@
   max-width: 100rem;
   margin: 0 auto;
   transition: all 0.4s ease-in-out;
-  display: block; /* default layout */
+  display: block;
 }
 
 /* Animación de entrada */
