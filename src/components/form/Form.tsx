@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { countries } from "../../data/countries";
 import styles from "./Form.module.css";
+import type { SearchType } from "../../types/index";
 
 export default function Form() {
+  const [city, setCity] = useState<SearchType>({
+    city: "",
+    country: "",
+  });
+
   return (
     <form className={styles.form}>
       <div className={styles.field}>
