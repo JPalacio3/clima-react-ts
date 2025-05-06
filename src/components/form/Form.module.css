@@ -1,0 +1,41 @@
+.form,
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form input[type="text"],
+.form select {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.3rem solid var(--white);
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  outline: none;
+}
+.form select option {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.submit {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--primary);
+  }
+}

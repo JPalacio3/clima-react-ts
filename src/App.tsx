@@ -7,9 +7,8 @@ function App() {
       <h1 className={styles.title}>Buscador de clima</h1>
 
       <div className={styles.container}>
-        <p>
-          <Form />
-        </p>
+        <Form />
+
         <p>2</p>
       </div>
     </>

@@ -3,13 +3,13 @@ import styles from "./Form.module.css";
 
 export default function Form() {
   return (
-    <form>
-      <div className="">
+    <form className={styles.form}>
+      <div className={styles.field}>
         <label htmlFor="city">Ciudad</label>
         <input type="text" id="city" name="city" placeholder="Ciudad" />
       </div>
 
-      <div className="">
+      <div className={styles.field}>
         <label htmlFor="country">País</label>
 
         <select name="" id="">
@@ -22,7 +22,11 @@ export default function Form() {
         </select>
       </div>
 
-      <input type="submit" value={"Consultar Clima"} />
+      <input
+        type="submit"
+        value={"Consultar Clima"}
+        className={styles.submit}
+      />
     </form>
   );
 }
