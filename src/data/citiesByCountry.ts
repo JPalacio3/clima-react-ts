@@ -656,6 +656,166 @@ export const citiesByCountry: Record<string, string[]> = {
   BE: ["Brussels", "Antwerp", "Ghent", "Charleroi", "Liège"],
   NL: ["Amsterdam", "Rotterdam", "The Hague", "Utrecht", "Eindhoven"],
   SE: ["Stockholm", "Gothenburg", "Malmö", "Uppsala", "Västerås"],
+  // Albania
+  AL: ["Tirana", "Durrës", "Vlorë", "Shkodër", "Fier"],
+  // Serbia
+  RS: ["Belgrade", "Novi Sad", "Niš", "Kragujevac", "Subotica"],
+  // Grecia
+  GR: ["Athens", "Thessaloniki", "Patras", "Heraklion", "Larissa"],
+  // Angola
+  AO: ["Luanda", "N'dalatando", "Huambo", "Lobito", "Benguela"],
+  // Barbados
+  BB: ["Bridgetown", "Speightstown", "Oistins", "Holetown", "Bathsheba"],
+  //
+  BH: ["Manama", "Muharraq", "Riffa", "Sitrah", "A'ali"],
+  // Benin
+  BJ: ["Cotonou", "Porto-Novo", "Djougou", "Parakou", "Bohicon"],
+  // Birmania
+  MM: ["Yangon", "Mandalay", "Naypyidaw", "Taunggyi", "Mawlamyine"],
+  // Bosnia y Herzegovina
+  BA: ["Sarajevo", "Banja Luka", "Tuzla", "Zenica", "Mostar"],
+  // Burkina Faso
+  BF: ["Ouagadougou", "Bobo-Dioulasso", "Koudougou", "Banfora", "Ouahigouya"],
+  // Burundi
+  BI: ["Gitega", "Bujumbura", "Ngozi", "Muyinga", "Ruyigi"],
+  // Bután
+  BT: ["Thimphu", "Phuentsholing", "Punakha", "Paro", "Wangdue Phodrang"],
+  // Camboya
+  KH: [
+    "Phnom Penh",
+    "Siem Reap",
+    "Battambang",
+    "Sihanoukville",
+    "Kampong Cham",
+  ],
+  // Camerún
+  CM: ["Yaoundé", "Douala", "Garoua", "Kumba", "Bamenda"],
+  // Chipre
+  CY: ["Nicosia", "Limassol", "Larnaca", "Famagusta", "Kyrenia"],
+  // Costa de Marfil
+  CI: ["Abidjan", "Bouaké", "San Pedro", "Daloa", "Yamoussoukro"],
+  // Eritrea
+  ER: ["Asmara", "Keren", "Massawa", "Assab", "Mendefera"],
+  // Fiyi
+  FJ: ["Suva", "Nadi", "Lautoka", "Labasa", "Ba"],
+  // Gabón
+  GA: ["Libreville", "Port-Gentil", "Franceville", "Moanda", "Oyem"],
+  // Gambia
+  GM: ["Banjul", "Serekunda", "Brikama", "Bakau", "Kerewan"],
+  // Groelandia
+  GL: ["Nuuk", "Sisimiut", "Ilulissat", "Qaqortoq", "Aasiaat"],
+  // Guam
+  GU: ["Hagåtña", "Dededo", "Yigo", "Mangilao", "Tamuning"],
+  // Guinea-Bissau
+  GW: ["Bissau", "Bafatá", "Gabú", "Cacheu", "Bolama"],
+  // Islas Cook
+  CK: ["Avarua", "Mangaia", "Rarotonga", "Atiu", "Mitiaro"],
+  // Islas Malvinas
+  FK: ["Stanley", "Mount Pleasant", "Port Howard", "Fox Bay", "Darwin"],
+  // Islas Marianas del Norte
+  MP: ["Saipan", "Tinian", "Rota", "Guam", "Pagan"],
+  // Islas Marshall
+  MH: ["Majuro", "Ebeye", "Kwajalein", "Arno", "Maloelap"],
+  // Islas Salomón
+  SB: ["Honiara", "Gizo", "Auki", "Noro", "Munda"],
+  // Kiribati
+  KI: ["Tarawa", "Betio", "Bairiki", "Teaoraereke", "London"],
+  // Kosovo
+  XK: ["Pristina", "Mitrovica", "Ferizaj", "Gjakova", "Peja"],
+  // Laos
+  LA: ["Vientiane", "Luang Prabang", "Pakse", "Savannakhet", "Xieng Khouang"],
+  // Lesoto
+  LS: ["Maseru", "Teyateyaneng", "Maputsoe", "Mohale's Hoek", "Quthing"],
+  // Liberia
+  LR: ["Monrovia", "Gbarnga", "Buchanan", "Zwedru", "Harper"],
+  // Libia
+  LY: ["Tripoli", "Benghazi", "Misrata", "Tobruk", "Al Bayda"],
+  // Macedonia del Norte
+  MK: ["Skopje", "Bitola", "Ohrid", "Tetovo", "Kumanovo"],
+  // Madagascar
+  MG: ["Antananarivo", "Toamasina", "Antsiranana", "Fianarantsoa", "Mahajanga"],
+  // Maldivas
+  MV: ["Malé", "Addu City", "Fuvahmulah", "Kulhudhuffushi", "Dhidhdhoo"],
+  // Malí
+  ML: ["Bamako", "Sikasso", "Koulikoro", "Kayes", "Segou"],
+  // Mauricio
+  MU: [
+    "Port Louis",
+    "Curepipe",
+    "Beau Bassin-Rose Hill",
+    "Vacoas-Phoenix",
+    "Quatre Bornes",
+  ],
+  // Mauritania
+  MR: ["Nouakchott", "Nouadhibou", "Rosso", "Kiffa", "Atar"],
+  // Micronesia
+  FM: ["Palikir", "Weno", "Kolonia", "Tonoas", "Kitti"],
+  // Montenegro
+  ME: ["Podgorica", "Nikšić", "Herceg Novi", "Bijelo Polje", "Pljevlja"],
+  // Mozambique
+  MZ: ["Maputo", "Beira", "Nampula", "Matola", "Tete"],
+  // Namibia
+  NA: ["Windhoek", "Walvis Bay", "Swakopmund", "Oshakati", "Rundu"],
+  // Nepal
+  NP: ["Kathmandu", "Pokhara", "Lalitpur", "Bhaktapur", "Biratnagar"],
+  // niger
+  NE: ["Niamey", "Zinder", "Maradi", "Agadez", "Diffa"],
+  // Niue
+  NU: ["Alofi", "Hanan", "Makefu", "Mutalau", "Tamakautoga"],
+  // Palaos
+  PW: ["Ngerulmud", "Melekeok", "Koror", "Airai", "Ngaraard"],
+  // Papua Nueva Guinea
+  PG: ["Port Moresby", "Lae", "Mount Hagen", "Madang", "Goroka"],
+  // República del Congo
+  CG: ["Brazzaville", "Pointe-Noire", "Dolisie", "Nkayi", "Owando"],
+  // Republica democratica del Congo
+  CD: ["Kinshasa", "Lubumbashi", "Mbuji-Mayi", "Kananga", "Kisangani"],
+  // Ruanda
+  RW: ["Kigali", "Butare", "Gisenyi", "Musanze", "Rubavu"],
+  // Samoa
+  WS: ["Apia", "Salelologa", "Mulifanua", "Faleolo", "Savaii"],
+  // Samoa Americana
+  AS: ["Pago Pago", "Tafuna", "Fagatogo", "Aua", "Nu'uuli"],
+  // San Pedro y Miquelón
+  PM: [
+    "Saint-Pierre",
+    "Miquelon-Langlade",
+    "Île aux Marins",
+    "Île aux Serpents",
+    "Île aux Chèvres",
+  ],
+  // Senegal
+  SN: ["Dakar", "Touba", "Pikine", "Kaolack", "Ziguinchor"],
+  // Seychelles
+  SC: ["Victoria", "Anse Boileau", "Beau Vallon", "Baie Lazare", "Anse Royale"],
+  // Sierra Leona
+  SL: ["Freetown", "Bo", "Kenema", "Makeni", "Koidu"],
+  // Somalia
+  SO: ["Mogadishu", "Hargeisa", "Bosaso", "Kismayo", "Baidoa"],
+  // SRI Lanka
+  LK: ["Colombo", "Kandy", "Galle", "Negombo", "Jaffna"],
+  // Suazilandia
+  SZ: ["Mbabane", "Manzini", "Nhlangano", "Lobamba", "Piggs Peak"],
+  // Sudán
+  SD: ["Khartoum", "Omdurman", "Port Sudan", "Nyala", "El Obeid"],
+  // Sudán del Sur
+  SS: ["Bor", "Juba", "Malakal", "Rumbek", "Wau"],
+  // Timor Oriéntal
+  TL: ["Dili", "Baucau", "Suai", "Ainaro", "Lospalos"],
+  // Togo
+  TG: ["Lomé", "Sokodé", "Kpalimé", "Atakpamé", "Tsévié"],
+  // Tonga
+  TO: ["Nuku'alofa", "Neiafu", "Vava'u", "Ha'apai", "Tongatapu"],
+  // Vanuatu
+  VU: ["Port Vila", "Luganville", "Norsup", "Lenakel", "Isangel"],
+  // Yemen
+  YE: ["Sana'a", "Aden", "Taiz", "Hodeida", "Mukalla"],
+  // Yibuti
+  DJ: ["Djibouti", "Ali Sabieh", "Tadjourah", "Dikhil", "Obock"],
+  // Zambia
+  ZM: ["Lusaka", "Kitwe", "Ndola", "Livingstone", "Chingola"],
+  // Zimbabue
+  ZW: ["Harare", "Bulawayo", "Gweru", "Mutare", "Kwekwe"],
 
   // Por si acaso, un par más de países de Asia y Europa
   TR: ["Istanbul", "Ankara", "Izmir", "Bursa", "Adana"],

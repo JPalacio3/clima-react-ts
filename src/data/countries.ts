@@ -29,11 +29,10 @@ export const countries: Country[] = [
   { code: "HT", name: "Haití" },
   { code: "BZ", name: "Belice" },
 
-  { code: "SR", name: "Surinam" },
   { code: "BO", name: "Bolivia" },
   { code: "PY", name: "Paraguay" },
   { code: "GY", name: "Guyana" },
-  { code: "SR", name: "Surinam" },
+
   { code: "FK", name: "Islas Malvinas" },
 
   { code: "GL", name: "Groenlandia" },
@@ -192,7 +191,6 @@ export const countries: Country[] = [
   { code: "SZ", name: "Suazilandia" },
   { code: "TG", name: "Togo" },
   { code: "TN", name: "Túnez" },
-  { code: "UG", name: "Uganda" },
 
   // Oceanía
   { code: "AU", name: "Australia" },
@@ -205,7 +203,7 @@ export const countries: Country[] = [
   { code: "WS", name: "Samoa" },
   { code: "CK", name: "Islas Cook" },
   { code: "NU", name: "Niue" },
-  { code: "TV", name: "Tuvalu" },
+
   { code: "KI", name: "Kiribati" },
 
   { code: "AS", name: "Samoa Americana" },

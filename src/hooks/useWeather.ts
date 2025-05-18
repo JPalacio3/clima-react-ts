@@ -1,6 +1,6 @@
 import axios from "axios";
 // import { z } from "zod";
-import { object, string, number, array, optional, parse } from "valibot";
+import { object, string, number, array, optional, parse, set } from "valibot";
 import type { InferOutput } from "valibot";
 import type { SearchType } from "../types";
 import { useMemo, useState } from "react";
@@ -72,8 +72,12 @@ export default function useWeather() {
     },
   });
 
+  // spiner de carga
+  const [loading, setLoading] = useState(false);
+
   const fetchWeather = async (search: SearchType) => {
     const appId = import.meta.env.VITE_API_KEY;
+    setLoading(true);
 
     try {
       const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appId}`;
@@ -116,6 +120,8 @@ export default function useWeather() {
       }
     } catch (error) {
       console.error("Error fetching weather data:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
