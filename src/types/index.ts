@@ -9,6 +9,9 @@ export type Country = {
 };
 
 export type Weather = {
+  weather: {
+    icon: string;
+  };
   name: string;
   main: {
     temp: number;
