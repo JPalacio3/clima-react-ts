@@ -3,6 +3,7 @@ import axios from "axios";
 import { object, string, number, array, optional, parse } from "valibot";
 import type { InferOutput } from "valibot";
 import type { SearchType } from "../../types";
+import { useState } from "react";
 
 //  Type Guard o Assertion
 // function isWeatherReesponse(weather: unknown): weather is Weather {
@@ -55,6 +56,20 @@ const WeatherSchema = object({
 type Weather = InferOutput<typeof WeatherSchema>;
 
 export default function useWeather() {
+  const [weather, setWeather] = useState<Weather>({
+    weather: {
+      icon: "",
+      description: "",
+      main: "",
+    },
+    name: "",
+    main: {
+      temp: 0,
+      temp_min: 0,
+      temp_max: 0,
+    },
+  });
+
   const fetchWeather = async (search: SearchType) => {
     const appId = import.meta.env.VITE_API_KEY;
 
@@ -93,13 +108,17 @@ export default function useWeather() {
       const { data: weatherResult } = await axios.get(weatherUrl);
 
       const result = parse(WeatherSchema, weatherResult);
-      console.log(result);
+
+      if (result) {
+        setWeather(result);
+      }
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
   };
 
   return {
+    weather,
     fetchWeather,
   };
 }
