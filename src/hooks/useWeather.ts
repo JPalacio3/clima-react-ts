@@ -2,8 +2,8 @@ import axios from "axios";
 // import { z } from "zod";
 import { object, string, number, array, optional, parse } from "valibot";
 import type { InferOutput } from "valibot";
-import type { SearchType } from "../../types";
-import { useState } from "react";
+import type { SearchType } from "../types";
+import { useMemo, useState } from "react";
 
 //  Type Guard o Assertion
 // function isWeatherReesponse(weather: unknown): weather is Weather {
@@ -53,15 +53,17 @@ const WeatherSchema = object({
   }),
 });
 
-type Weather = InferOutput<typeof WeatherSchema>;
+export type Weather = InferOutput<typeof WeatherSchema>;
 
 export default function useWeather() {
   const [weather, setWeather] = useState<Weather>({
-    weather: {
-      icon: "",
-      description: "",
-      main: "",
-    },
+    weather: [
+      {
+        icon: "",
+        description: "",
+        main: "",
+      },
+    ],
     name: "",
     main: {
       temp: 0,
@@ -117,8 +119,11 @@ export default function useWeather() {
     }
   };
 
+  const hasWeatherData = useMemo(() => weather.name, [weather]);
+
   return {
     weather,
     fetchWeather,
+    hasWeatherData,
   };
 }

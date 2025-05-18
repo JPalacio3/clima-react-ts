@@ -8,10 +8,14 @@ export type Country = {
   name: string;
 };
 
+export type WeatherCondition = {
+  icon: string;
+  description?: string;
+  main?: string;
+};
+
 export type Weather = {
-  weather: {
-    icon: string;
-  };
+  weather: WeatherCondition[]; // Array porque la API devuelve un array de condiciones
   name: string;
   main: {
     temp: number;
