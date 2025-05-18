@@ -1,5 +1,7 @@
 import axios from "axios";
-import { z } from "zod";
+// import { z } from "zod";
+import { object, string, number, array, optional, parse } from "valibot";
+import type { InferOutput } from "valibot";
 import type { SearchType } from "../../types";
 
 //  Type Guard o Assertion
@@ -14,25 +16,43 @@ import type { SearchType } from "../../types";
 //   );
 // }
 
-// ZOD para un tipado más eficiente
+// ZOD para el tipado de la respusta
+// const WeatherSchema = z.object({
+//   weather: z.array(
+//     z.object({
+//       icon: z.string(),
+//       description: z.string().optional(), // Puedes añadir más campos si los usas
+//       main: z.string().optional(),
+//     })
+//   ),
+//   name: z.string(),
+//   main: z.object({
+//     temp: z.number(),
+//     temp_min: z.number(),
+//     temp_max: z.number(),
+//   }),
+// });
 
-const WeatherSchema = z.object({
-  weather: z.array(
-    z.object({
-      icon: z.string(),
-      description: z.string().optional(), // Puedes añadir más campos si los usas
-      main: z.string().optional(),
+// type Weather = z.infer<typeof WeatherSchema>;
+
+// Valibot para el tipado de la respuesta
+const WeatherSchema = object({
+  weather: array(
+    object({
+      icon: string(),
+      description: optional(string()),
+      main: optional(string()),
     })
   ),
-  name: z.string(),
-  main: z.object({
-    temp: z.number(),
-    temp_min: z.number(),
-    temp_max: z.number(),
+  name: string(),
+  main: object({
+    temp: number(),
+    temp_min: number(),
+    temp_max: number(),
   }),
 });
 
-type Weather = z.infer<typeof WeatherSchema>;
+type Weather = InferOutput<typeof WeatherSchema>;
 
 export default function useWeather() {
   const fetchWeather = async (search: SearchType) => {
@@ -59,15 +79,21 @@ export default function useWeather() {
       //   }
 
       // ZOD para un tipado más eficiente
-      const { data: weatherResult } = await axios.get(weatherUrl);
-      const result = WeatherSchema.safeParse(weatherResult);
+      // const { data: weatherResult } = await axios.get(weatherUrl);
+      // const result = WeatherSchema.safeParse(weatherResult);
 
-      if (result.success) {
-        const weather = result.data;
-        console.log(weather.name);
-        console.log(weather.main.temp);
-        console.log(weather.weather[0].icon);
-      }
+      // if (result.success) {
+      //   const weather = result.data;
+      //   console.log(weather.name);
+      //   console.log(weather.main.temp);
+      //   console.log(weather.weather[0].icon);
+      // }
+
+      // Valibot para un tipado más eficiente
+      const { data: weatherResult } = await axios.get(weatherUrl);
+
+      const result = parse(WeatherSchema, weatherResult);
+      console.log(result);
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
