@@ -62,7 +62,7 @@ export default function Form({
           value={search.country}
           onChange={handleChange}
         >
-          <option value="defaulValue" disabled>
+          <option value={""} defaultChecked disabled>
             -- Seleccione un país --
           </option>
           {sortedCountries.map((country) => (

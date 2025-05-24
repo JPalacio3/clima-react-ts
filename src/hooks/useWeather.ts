@@ -1,6 +1,6 @@
 import axios from "axios";
 // import { z } from "zod";
-import { object, string, number, array, optional, parse, set } from "valibot";
+import { object, string, number, array, optional, parse } from "valibot";
 import type { InferOutput } from "valibot";
 import type { SearchType } from "../types";
 import { useMemo, useState } from "react";
