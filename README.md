@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# Clima Mundial 🌍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Previsualización del Proyecto](public/clima.png)](https://clima-mundial-jp.netlify.app/)
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clima Mundial es una aplicación web que permite a los usuarios consultar el clima actual de cualquier ciudad del mundo. La aplicación utiliza la API de OpenWeatherMap para obtener datos meteorológicos en tiempo real, incluyendo temperatura, condiciones climáticas y más.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: Biblioteca para construir interfaces de usuario.
+- **TypeScript**: Superset de JavaScript que añade tipado estático.
+- **Vite**: Herramienta de construcción rápida para proyectos modernos de frontend.
+- **Valibot**: Utilizado para la validación y tipado de datos.
+- **CSS Modules**: Para estilos encapsulados y reutilizables.
+- **Axios**: Para realizar solicitudes HTTP a la API de OpenWeatherMap.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Enfoque y Arquitectura
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El proyecto sigue un enfoque modular y escalable:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Componentes Reutilizables**: Cada funcionalidad está dividida en componentes reutilizables como `Form`, `Spinner`, y `WeatherDetail`.
+- **Hooks Personalizados**: Uso de hooks como `useWeather` para manejar la lógica de estado y las solicitudes a la API.
+- **Validación de Datos**: Uso de Valibot para garantizar que los datos de la API cumplan con el esquema esperado.
+- **Carpeta `public/`**: Contiene recursos estáticos como imágenes y archivos que se sirven directamente desde la raíz.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Cómo Ejecutar el Proyecto Localmente
+
+1. Clona este repositorio.
+2. Instala las dependencias con `npm install`.
+3. Crea un archivo `.env` en la raíz del proyecto y añade tu clave de API de OpenWeatherMap:
+   ```env
+   VITE_API_KEY=tu_api_key
+   ```
+4. Inicia el servidor de desarrollo con `npm run dev`.
+5. Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
+
+## Enlace a Producción
+
+Haz clic en la imagen para visitar la aplicación en producción:
+
+[![Previsualización del Proyecto](public/clima.png)](https://clima-mundial-jp.netlify.app/)
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT.
