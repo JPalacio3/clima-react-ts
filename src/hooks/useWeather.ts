@@ -138,7 +138,7 @@ export default function useWeather() {
     }
   };
 
-  const hasWeatherData = useMemo(() => !!weather.name, [weather]);
+  const hasWeatherData = useMemo(() => weather.name !== "", [weather]);
 
   return {
     weather,
