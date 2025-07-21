@@ -16,7 +16,7 @@
 }
 
 .sk-chase-dot:before {
-  content: "⛅";
+  content: "";
   display: block;
   width: 30%;
   height: 30%;
